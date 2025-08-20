@@ -7,7 +7,6 @@ SmartTextGen is a practical, CPU-friendly text generation stack. It orchestrates
 ---
 
 ## ✨ Features
-
 - **RAG over your PDFs** (optional): ingest, chunk, embed, and retrieve from `data/docs/`
 - **Agentic loop (LangGraph)**: Answer → Critic → (optional) Revise with stop conditions
 - **Citations**: Answers can include `[docN]` references to retrieved chunks
@@ -18,7 +17,6 @@ SmartTextGen is a practical, CPU-friendly text generation stack. It orchestrates
 ---
 
 ## 🧱 Tech Stack
-
 - **LangChain**, **LangGraph**
 - **Hugging Face** `transformers`, **sentence-transformers**
 - **ChromaDB** vector store
@@ -28,7 +26,7 @@ SmartTextGen is a practical, CPU-friendly text generation stack. It orchestrates
 
 ## 🚀 Quickstart (Windows + conda)
 
-powershell
+```powershell
 # 1) Create & activate env
 conda create -n research-assistant python=3.10 -y
 conda activate research-assistant
@@ -39,22 +37,5 @@ pip install -r requirements.txt
 # 3) Add at least one PDF to:
 #    data/docs/ (e.g., paper1.pdf)
 
-# 4) Run the CLI
-python -m src.cli.
-
-smart-research-assistant/
-├─ README.md
-├─ requirements.txt
-├─ data/
-│  └─ docs/                  # put your PDFs here (you can keep a .gitkeep)
-├─ chroma_db/                # created at runtime (vector store)
-└─ src/
-   ├─ __init__.py
-   ├─ config.py              # paths, model IDs, context sizes
-   ├─ ingest.py              # PDF -> chunks -> embeddings -> Chroma retriever
-   ├─ rag_chain.py           # RAG prompt + HF pipeline
-   ├─ graph_app.py           # LangGraph loop: answer -> critic -> revise
-   └─ cli.py                 # CLI entrypoint (python -m src.cli)
-
-
-  
+# 4) Run the CLI (from the project root)
+python -m src.cli
