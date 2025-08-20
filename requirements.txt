@@ -1,0 +1,9 @@
+langchain>=0.2
+langgraph>=0.2
+langchain-community
+langchain-text-splitters
+chromadb
+pypdf
+transformers>=4.42
+accelerate
+sentence-transformers

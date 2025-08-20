@@ -1,0 +1,56 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Environments / secrets ---
+.venv/
+venv/
+env/
+env.bak/
+.conda/
+.conda_env/
+.env
+.env.*
+*.env
+
+# --- Build / packaging ---
+build/
+dist/
+*.egg-info/
+
+# --- Tool caches / logs ---
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.cache/
+logs/
+*.log
+
+# --- IDE / Editors ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Project-specific ---
+# Chroma vector store
+chroma_db/
+
+# Data: keep folders but avoid committing big PDFs by default
+data/*
+!data/
+!data/docs/
+data/docs/*.pdf
+!data/docs/.gitkeep
+
+# Model / training artifacts (if you fine-tune later)
+checkpoints/
+outputs/
+runs/
